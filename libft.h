@@ -6,7 +6,7 @@
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 02:18:05 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/11 02:51:17 by buonturk         ###   ########.fr       */
+/*   Updated: 2023/10/11 11:16:14 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
+int		ft_toupper(int c);
+int	ft_tolower(int c);
 
 #endif
