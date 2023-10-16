@@ -6,7 +6,7 @@
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:16:36 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/10 17:55:46 by buonturk         ###   ########.fr       */
+/*   Updated: 2023/10/16 17:00:19 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	if (dstsize != 0)
 		dst[i] = '\0';
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	return (i);
+	return (ft_strlen(src));
 }
