@@ -3,6 +3,10 @@
         "_types.h": "c",
         "libft.h": "c",
         "sstream": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "__bit_reference": "c",
+        "bitset": "c",
+        "chrono": "c",
+        "unordered_map": "c"
     }
 }
