@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 15:33:50 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/17 16:31:58 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/17 16:34:23 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/17 16:45:20 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	c;
 
-	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
 	c = 0;
-	while (s1[c])
+	while (set[c])
 	{
-		str[c] = s1[c];
+		if(s1[0] == set[0])
+			
 		c++;
 	}
-	c = 0;
-	while (s2[c])
-	{
-		str[ft_strlen(s1) + c] = s2[c];
-		c++;
-	}
-	str[ft_strlen(s1) + c] = '\0';
-	return (str);
+	
 }

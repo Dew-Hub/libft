@@ -6,7 +6,7 @@
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 10:33:21 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/17 15:52:51 by buonturk         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:31:38 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
 	size_t	i;
 	size_t	j;
 	char	*final;
@@ -39,8 +38,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (final);
 	}
 	return (NULL);
+}
 
-/* çalışıyor
+/* 
+	çalışıyor
 	char	*str;
 	char	*src;
 
@@ -64,8 +65,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ft_strlcpy(str, (char *)(s + start), len + 1);
 	}
 	return (str);
-	*/
-/* çalışıyor
+
 	char	*str;
 	char	*src;
 
@@ -89,9 +89,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ft_strlcpy(str, (char *)(s + start), len + 1);
 	}
 	return (str);
-*/
-	
-	/*
+
+
 	char	*sub_str;
 	size_t	i;
 
@@ -107,9 +106,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	ft_strlcpy(sub_str, s + start, i + 1);
 	return (sub_str);
-	*/
 
-	/*
+
 	//size_t	i;
 	char	*sub_str;
 
@@ -130,4 +128,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		return (sub_str);
 		*/
-}
