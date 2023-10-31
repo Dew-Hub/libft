@@ -1,5 +1,3 @@
-   <ins>
-      
     ft_atoi.c       |-->	Bir diziyi tam sayıya dönüştürür.
     ft_bzero.c      |-->	Bellek alanını sıfırlar.
     ft_calloc.c     |-->	Belirtilen boyutta bellek tahsis eder ve sıfırlar.
