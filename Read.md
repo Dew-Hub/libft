@@ -1,4 +1,5 @@
    <ins>
+      
     ft_atoi.c       |-->	Bir diziyi tam sayıya dönüştürür.
 
     ft_bzero.c      |-->	Bellek alanını sıfırlar.
@@ -65,4 +66,6 @@
     
     ft_tolower.c    |-->	Bir karakteri küçük harfe dönüştürür.
     
-    ft_toupper.c    |-->	Bir karakteri büyük harfe dönüştürür. </ins>
+    ft_toupper.c    |-->	Bir karakteri büyük harfe dönüştürür. 
+    
+    </ins>
