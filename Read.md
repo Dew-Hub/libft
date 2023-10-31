@@ -34,5 +34,3 @@
     ft_substr.c     |-->	Bir dizeden belirli bir alt dizeyi çıkarır.
     ft_tolower.c    |-->	Bir karakteri küçük harfe dönüştürür.
     ft_toupper.c    |-->	Bir karakteri büyük harfe dönüştürür. 
-    
-    </ins>
