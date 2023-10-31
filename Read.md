@@ -1,4 +1,4 @@
-    ft_atoi.c       |-->	Bir diziyi tam sayıya dönüştürür.
+   <ins>ft_atoi.c       |-->	Bir diziyi tam sayıya dönüştürür.</ins>
 
     ft_bzero.c      |-->	Bellek alanını sıfırlar.
     
