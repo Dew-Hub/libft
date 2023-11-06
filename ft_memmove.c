@@ -5,23 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:34:06 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/16 16:55:55 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:16 by buonturk          #+#    #+#             */
+/*   Updated: 2023/11/01 02:37:56 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst < src)
-		ft_memcpy(dst, src, len);
-	else if (dst > src)
+	size_t	i;
+
+	if (dest == src)
+		return (dest);
+	if (src < dest)
 	{
 		while (len--)
-			((unsigned char *)(dst))[len] = ((unsigned char *)(src))[len];
+			*(char *)(dest + len) = *(char *)(src + len);
+		return (dest);
 	}
-	return (dst);
+	i = 0;
+	while (i < len)
+	{
+		*(char *)(dest + i) = *(char *)(src + i);
+		i++;
+	}
+	return (dest);
 }

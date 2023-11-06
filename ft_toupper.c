@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 11:03:01 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/11 11:13:22 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:50:53 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/30 20:50:54 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
 	return (c);
 }

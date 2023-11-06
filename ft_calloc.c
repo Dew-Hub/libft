@@ -5,20 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 18:08:55 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/16 18:16:15 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:31 by buonturk          #+#    #+#             */
+/*   Updated: 2023/11/01 02:38:58 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*result;
+	void	*u;
 
-	result = malloc(count * size);
-	if (result == NULL)
-		return (NULL);
-	ft_bzero(result, count * size);
-	return (result);
+	u = malloc(count * size);
+	if (u == 0)
+		return (0);
+	ft_bzero(u, count * size);
+	return (u);
 }

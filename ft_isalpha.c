@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 02:12:47 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/16 16:54:47 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:44 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/30 20:48:46 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

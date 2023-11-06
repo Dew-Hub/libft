@@ -5,16 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 02:12:47 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/10 20:25:46 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:40 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/30 20:48:42 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	return ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a'
+			&& c <= 'z'));
 }

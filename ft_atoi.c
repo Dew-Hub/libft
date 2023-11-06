@@ -5,34 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 11:14:07 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/14 15:53:37 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:17 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 13:49:08 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_atoi(const char *str)
 {
-	long long int	number;
-	int				neg;
+	long	result;
+	int		n;
 
-	number = 0;
-	neg = 1;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
+	n = 1;
+	result = 0;
+	while ((*str >= 9 && *str <= 13) || (*str == 32))
 		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (*str >= '0' && *str <= '9')
+	if (*str == '-' || *str == '+')
 	{
-		number = (number * 10) + (*str - '0') * neg;
+		if (*str == '-')
+			n = -1;
 		str++;
-		if (number > 2147483647)
-			return (-1);
-		if (number < -2147483648)
+		if (*str == '-' || *str == '+')
 			return (0);
 	}
-	return (number);
+	while (*str != 0 && *str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0') * n;
+		if (result > 2147483647)
+			return (-1);
+		if (result < -2147483648)
+			return (0);
+		str++;
+	}
+	return (result);
 }

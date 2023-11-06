@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 20:49:45 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/31 17:58:45 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:55 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 08:30:57 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	index;
 
-	i = 0;
-	while (s[i] != (char)c)
+	if (str)
 	{
-		if (!s[i])
-			return (0);
-		i++;
+		index = 0;
+		while (*str)
+			f(index++, str++);
 	}
-	return ((char *)(s + i));
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 00:18:18 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/14 00:25:45 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:50:39 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 20:04:48 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	s_len;
+	int	i;
 
-	s_len = ft_strlen(s);
-	while (*s != '\0')
-		s++;
-	while (s_len >= 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s--;
-		s_len--;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (NULL);
+	return (0);
 }

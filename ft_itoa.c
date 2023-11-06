@@ -1,39 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 20:49:58 by buonturk          #+#    #+#             */
-/*   Updated: 2023/11/01 02:25:33 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:00 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 13:59:41 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static int	numlen(int nbr)
 {
-	char	*str;
-	int		i;
-	int		j;
+	int	nbr_len;
 
-	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	nbr_len = 0;
+	if (nbr <= 0)
+		nbr_len++;
+	while (nbr)
+	{
+		nbr /= 10;
+		nbr_len++;
+	}
+	return (nbr_len);
+}
+
+char	*ft_itoa(int n)
+{
+	int		len;
+	char	*str;
+	long	nbr;
+
+	nbr = n;
+	len = numlen(nbr);
+	str = malloc(sizeof(char) * len + 1);
 	if (!str)
-		return (NULL);
-	i = 0;
-	while (s1[i] != 0)
+		return (0);
+	str[len--] = '\0';
+	if (n < 0)
 	{
-		str[i] = s1[i];
-		i++;
+		str[0] = '-';
+		nbr = -nbr;
 	}
-	j = 0;
-	while (s2[j] != 0)
+	if (n == 0)
+		str[0] = '0';
+	while (nbr > 0)
 	{
-		str[i + j] = s2[j];
-		j++;
+		str[len--] = nbr % 10 + 48;
+		nbr /= 10;
 	}
-	str[i + j] = 0;
 	return (str);
 }

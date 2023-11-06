@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 20:49:45 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/31 17:58:45 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:50:13 by buonturk          #+#    #+#             */
+/*   Updated: 2023/11/01 02:43:25 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+#include "libft.h"
+#include <stdlib.h>
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*str;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	i = ft_strlen(s);
+	str = malloc(i + 1);
+	if (!str)
+		return (0);
 	i = 0;
-	while (s[i] != (char)c)
+	while (s[i])
 	{
-		if (!s[i])
-			return (0);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return ((char *)(s + i));
+	str[i] = 0;
+	return (str);
 }

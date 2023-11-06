@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 20:49:45 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/31 17:58:45 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:32 by buonturk          #+#    #+#             */
+/*   Updated: 2023/11/01 02:01:54 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i] != (char)c)
+void	ft_putnbr_fd(int nb, int fd)
+{
+	long	number;
+
+	number = (long)nb;
+	if (number < 0)
 	{
-		if (!s[i])
-			return (0);
-		i++;
+		write(fd, "-", 1);
+		number *= -1;
 	}
-	return ((char *)(s + i));
+	if (number >= 10)
+	{
+		ft_putnbr_fd(number / 10, fd);
+		ft_putchar_fd(number % 10 + 48, fd);
+	}
+	else
+		ft_putchar_fd(number + '0', fd);
 }

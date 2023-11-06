@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:14:09 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/10 20:25:50 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:26 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 00:10:50 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	while (n)
+		((char *)s)[--n] = '\0';
 }

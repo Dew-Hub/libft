@@ -5,25 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:16:36 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/16 17:00:19 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 21:10:50 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 19:19:17 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
+	size_t	x;
 
-	i = 0;
-	while (src[i] && i < dstsize - 1)
+	x = 0;
+	if (dstsize > 0)
 	{
-		if (dstsize != 0)
-			dst[i] = src[i];
-		i++;
+		while (src[x] != '\0' && x < (dstsize - 1))
+		{
+			dst[x] = src[x];
+			x++;
+		}
+		dst[x] = 0;
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
-	return (ft_strlen(src));
+	while (src[x])
+		x++;
+	return (x);
 }

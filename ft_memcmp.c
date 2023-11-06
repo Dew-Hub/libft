@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 10:17:37 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/14 10:34:31 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:07 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 14:39:59 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	c;
+	size_t	i;
 
-	c = 0;
-	while (c < n)
+	i = 0;
+	while (i < n)
 	{
-		if (((unsigned char *)s1)[c] != ((unsigned char *)s2)[c])
-			return (((unsigned char *)s1)[c] - ((unsigned char *)s2)[c]);
-		c++;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
 	return (0);
 }

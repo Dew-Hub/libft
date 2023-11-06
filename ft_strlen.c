@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 02:12:47 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/11 02:50:41 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:50:09 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 11:33:38 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 size_t	ft_strlen(const char *s)
 {

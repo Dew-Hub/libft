@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 20:49:45 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/31 17:58:45 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:36 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/30 23:59:38 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (s[i] != (char)c)
-	{
-		if (!s[i])
-			return (0);
-		i++;
-	}
-	return ((char *)(s + i));
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	while (*s)
+		write(fd, s++, 1);
 }

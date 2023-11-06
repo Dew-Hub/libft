@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 00:28:15 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/14 03:42:13 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:50:16 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 19:27:20 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	c;
+	size_t	i;
 
-	c = 0;
-	while (c < n && (s1[c] != '\0' || s2[c] != '\0'))
+	i = 0;
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		if (s1[c] != s2[c])
-			return ((unsigned char)s1[c] - (unsigned char)s2[c]);
-		c++;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
 	return (0);
 }

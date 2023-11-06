@@ -5,16 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 02:12:47 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/10 20:25:59 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:48:56 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/30 22:18:52 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

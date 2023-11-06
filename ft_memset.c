@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buonturk <buonturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 02:12:47 by buonturk          #+#    #+#             */
-/*   Updated: 2023/10/10 20:26:03 by buonturk         ###   ########.fr       */
+/*   Created: 2023/10/30 20:49:20 by buonturk          #+#    #+#             */
+/*   Updated: 2023/10/31 17:16:52 by buonturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
